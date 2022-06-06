@@ -13,20 +13,22 @@ body {
     --secondary-text-color: #5c5c62;
     --durability-text-color: #6a737d9c;
     --icon-color: #6a737d;
-    --border-color: #ff9a0045;
-    --text-decoration-color: #ff9a00;
+    --border-color: darkgreen;
+    --text-decoration-color: darkgreen;
 }
 
 .container {
-    margin: 0 auto;
+    margin: 2%;
     padding: 0 30px;
     max-width: 900px;
+    box-shadow: -1px 1px 3px darkgreen, 2px -2px 10px #ffffff;
+    border-radius: 10px;
 }
 
 .fh {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .fv {
@@ -44,8 +46,8 @@ body {
 }
 
 .resume__block {
-    border-bottom: 3px solid var(--border-color);
-    padding-bottom: 30px;
+    padding-bottom: 2%;
+    padding-top: 2%;
     margin-bottom: 15px;
 }
 
@@ -92,10 +94,19 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 25%;
+}
+
+.contact-info__block--side {
+    box-shadow: -5px 5px 10px #c0c0c0, 5px -5px 10px #ffffff;
+    border-radius: 10px;
+    padding: 1% 2% 1% 2%;
 }
 
 .contact-info__block--center {
+    width: 33%;
     justify-content: center;
+    align-items: center;
 }
 
 .contact-info__item {
@@ -127,21 +138,26 @@ body {
 
 .contact-info__avatar {
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 128px;
+    height: 128px;
     object-fit: cover;
-    border: 3px solid;
-    border-color: var(--text-decoration-color);
+    box-shadow: -5px 5px 5px #c0c0c0, 5px -5px 10px #ffffff;
 }
+
+#svgIcon {
+    height: max-content;
+    width: max-content;
+}
+
 /*Intro and skills styles*/
 
 .intro {
     display: flex;
-    justify-content: start;
+    flex-direction: column;
+    align-items: center;
 }
 
 .intro__icon-wrapper {
-    margin-right: 30px;
     width: 30px;
     display: flex;
     justify-content: center;
@@ -171,6 +187,7 @@ body {
     color: var(--secondary-text-color);
     text-align: justify;
 }
+
 /*Experience and additional info styles*/
 
 .experiences {
@@ -266,4 +283,3 @@ body {
 .additional-info__languages-item {
     color: var(--secondary-text-color);
 }
-
